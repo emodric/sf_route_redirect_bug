@@ -1,0 +1,13 @@
+test_route_no_slash:
+    path: /foo
+    methods: [GET]
+    defaults:
+        _controller: "Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController::redirectAction"
+        route: test_route
+        permanent: true
+
+test_route:
+    path: /foo/
+    methods: [GET]
+    defaults:
+        _controller: "App\\Controller\\FooController"
